@@ -18,5 +18,6 @@ btn.addEventListener('click', function () {
 function getRandomNumber() {
   //.random() returns a number between 0-1
   //multiplying by the length of the colours array will lead to values between 0-3
-  return Math.random() * colours.length
+  //.floor used to round number down to an integer
+  return Math.floor(Math.random() * colours.length)
 }
