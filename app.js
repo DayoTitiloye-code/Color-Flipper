@@ -8,9 +8,15 @@ const colour = document.querySelector('.colour')
 btn.addEventListener('click', function () {
   //can use document.body to target the body
   //get random number between 0-3 (array's are 0 index based)
-  const randomNum = 2
+  const randomNum = getRandomNumber()
   document.body.style.backgroundColor = colours[randomNum]
   colour.textContent = colours[randomNum]
 })
 
 //set up a function that will generate number between 0-3
+
+function getRandomNumber() {
+  //.random() returns a number between 0-1
+  //multiplying by the length of the colours array will lead to values between 0-3
+  return Math.random() * colours.length
+}
